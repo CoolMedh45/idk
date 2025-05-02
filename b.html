@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE ULTIMATE PLUGIN LIBRARY</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: #121212;
+      color: #f1f1f1;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    .para {
+      font-size: 18px;
+      color: #c0c0c0;
+      margin-bottom: 2rem;
+      animation: slideDown 1.2s ease-out;
+    }
+
+    .marquee {
+      white-space: nowrap;
+      box-sizing: border-box;
+      width: 100%;
+      border-radius: 15px;
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .marquee-content {
+      display: flex;
+      flex-direction: column;
+      animation: marquee-vertical 25s linear infinite;
+      align-items: center;
+    }
+
+    .marquee-content li {
+      list-style: none;
+      margin: 10px 0;
+    }
+
+    button {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      border: none;
+      border-radius: 12px;
+      padding: 1rem 2rem;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0;
+      animation: popIn 0.6s ease-out forwards;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 170, 255, 0.25);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    button:nth-child(n) {
+      animation-delay: calc(0.2s * var(--i));
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes marquee-vertical {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="marquee">
+    <div class="container">
+      <h1>Plugin Library + Resources</h1>
+      <p class="para">Compatible with Adobe AE 2023 & various video editors</p>
+      <ul class="marquee-content">
+        <!-- Existing Plugin Buttons -->
+        <li><button style="--i:1" onclick="handleClick('https://drive.google.com/file/d/1e3Iv2QN-cNwCzfl1hiDTx0Gn_aF1lWRT/view?usp=drive_link')">Magic Bullet Suite</button></li>
+        <li><button style="--i:2" onclick="handleClick('https://drive.google.com/file/d/1eAl--JlUIHSYS8VZdymCz4qbmKRcVebE/view?usp=drive_link')">Twixtor Pro</button></li>
+        <li><button style="--i:3" onclick="handleClick('https://drive.google.com/file/d/1XoPXsC3FHqQD2EyOUeYK4qJ170FHlVav/view?usp=drive_link')">Twitch</button></li>
+        <li><button style="--i:4" onclick="handleClick('https://drive.google.com/file/d/1Wmf06g4urki6_nCDFDWqHcj0fLMv4IUq/view?usp=drive_link')">Sapphire</button></li>
+        <li><button style="--i:5" onclick="handleClick('https://drive.google.com/file/d/1FCmAVKr2656PvACcswpQ6f99_UE8xjAD/view?usp=drive_link')">Boris FX Continuum</button></li>
+        <li><button style="--i:6" onclick="handleClick('https://drive.google.com/file/d/1O-UafCHW13bOkKw6EBcNc_aTWZHyKv98/view?usp=drive_link')">Optical Flares</button></li>
+        <li><button style="--i:7" onclick="handleClick('https://drive.google.com/file/d/1G4RAI11IRgnsgqNcQPjF2M8Tr0I_PbUa/view?usp=drive_link')">Red Giant Universe</button></li>
+        <li><button style="--i:8" onclick="handleClick('https://drive.google.com/file/d/1Bff4t_ENmjBzErJOmP51WgvHUyD4GWeh/view?usp=drive_link')">Element 3D</button></li>
+        <li><button style="--i:9" onclick="handleClick('https://drive.google.com/file/d/19GBkS3jtkttppCs3KkTDrIGaFF8iVPAL/view?usp=drive_link')">Deep Glow</button></li>
+        <li><button style="--i:10" onclick="handleClick('https://drive.google.com/file/d/1Ke5HJAoAGsRtrz4pO-g0LM9s2zkFefz_/view?usp=drive_link')">RSMB</button></li>
+        <li><button style="--i:11" onclick="handleClick('https://drive.google.com/file/d/1haTSGanoka3HkQxSnnS3rJabXOJAHbWq/view?usp=drive_link')">Crossphere Bokeh</button></li>
+        <li><button style="--i:12" onclick="handleClick('https://drive.google.com/file/d/1-78ct7uPwkwA5EPXjlTNcDiZ9dliz8YA/view?usp=drive_link')">Mantra</button></li>
+        <li><button style="--i:13" onclick="handleClick('https://drive.google.com/file/d/1LnT8ytyzLYyQ3Km0vGO7a0RTaGSOYPXs/view?usp=drive_link')">Pixel Sorter 2</button></li>
+        <li><button style="--i:14" onclick="handleClick('https://drive.google.com/drive/folders/14G471bNiCuLL34N_tSSHtv1rVCjbkMrY?usp=drive_link')">Clips, Tutorials, Resources</button></li>
+        <li><button style="--i:15" onclick="handleClick('https://drive.google.com/file/d/1UANDqqW-YHJaAM7WttC8V1HE00lW4-U5/view?usp=drive_link')">VCColorVibrance_1.0.6</button></li>
+        <li><button style="--i:16" onclick="handleClick('https://drive.google.com/file/d/14XVO04cLHJLWSy5EpwhwcblI387-zhTZ/view?usp=sharing')">VC Orb Plugin</button></li>
+        <li><button style="--i:17" onclick="handleClick('https://drive.google.com/file/d/16mAAPDR78eTtMGBu0hEXRUvvXxv-hMJI/view?usp=sharing')">Trapcode 15</button></li>
+        <li><button style="--i:18" onclick="handleClick('https://drive.google.com/file/d/1N9Gy2dcEZsdqAqzelq1vVE26j15OZSBS/view?usp=sharing')">Swiss_Knife_1.1.7</button></li>
+        <li><button style="--i:19" onclick="handleClick('https://drive.google.com/file/d/18HPluVnf0XReiDfeq4S-hLW_Mv4i2w5k/view?usp=sharing')">Stardust v1.6.0b</button></li>
+
+        <!-- New Resource Buttons -->
+        <li><button style="--i:20" onclick="handleClick('https://drive.google.com/drive/folders/14sEPjDcYdZsiRDBCtEv7RZI9nos_bXzY?usp=sharing')">Overlays</button></li>
+        <li><button style="--i:21" onclick="handleClick('https://drive.google.com/drive/folders/1skWHugRPqhS4dyQIJKTEqdt--jcjxgB6?usp=drive_link')">Fonts</button></li>
+        <li><button style="--i:22" onclick="handleClick('https://drive.google.com/drive/folders/12ND6xpq6gfHkwXG6TUrVOBFJJl6TVWZd?usp=sharing')">SFX</button></li>
+        <li><button style="--i:23" onclick="handleClick('https://drive.google.com/drive/folders/1CuhpzaP-DsaaHmiGr81Wz1F6qmeQZILJ?usp=drive_link')">Presets (AE)</button></li>
+        <li><button style="--i:24" onclick="handleClick('https://drive.google.com/drive/folders/113RkCZ5OcPwXqVsY05RVMAVcV9HexOK7?usp=drive_link')">Flow Clips</button></li>
+        <li><button style="--i:25" onclick="handleClick('https://drive.google.com/drive/folders/1d-irQUOk1CVHHPrFoMYdWAT1Sgh7Czd5?usp=sharing')">More Plugins</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function handleClick(url) {
+      const num1 = Math.floor(Math.random() * 10);
+      const num2 = Math.floor(Math.random() * 10);
+      const answer = num1 + num2;
+      const userAnswer = prompt(`Please solve to proceed: ${num1} + ${num2} = ?`);
+      if (parseInt(userAnswer) === answer) {
+        window.open(url, '_blank');
+      } else {
+        alert("Incorrect! Try again.");
+      }
+    }
+  </script>
+</body>
+</html>
